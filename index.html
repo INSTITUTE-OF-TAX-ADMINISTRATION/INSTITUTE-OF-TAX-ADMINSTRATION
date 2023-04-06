@@ -1,286 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="./css/navstyle.css?v=1.0" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="Css.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="Css.css" />
 
     <title>SARIS | Academic Records | Exam Result</title>
     <!--modernaizer here-->
-
-    <script src="modernizr-custom.js">
-    </script>
-    <!--script loaded for datatable-->
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../assets/dist/sweetalert2.js"></script>
-  <link rel="stylesheet" href="../assets/dist/sweetalert2.css">
-</head>
-<body>
-<!-- navbar -->
-<!-- navbar -->
-
-<div>
-<nav class="navbar  navbar-default  navbar-expand-lg navbar-toggleable-sm navbar-light bg-faded  sticky-top">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <a class="navbar-brand nav-link" href="studentindex.php"><img width="70" src="logo.png "/>  SARIS SYSTEM</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav d-flex flex-row flex-nowrap ml-auto mr-sm-5 mr-md-5 mr-lg-0">
-            <li class="nav-item ">
-                <a class="navbar-brand nav-link" href="#"><img class="rounded-circle" width="40"
-                                                 src="wambura.jpg"/>  WAMBURA, Ghatyline</a>
-            </li>
-            <li class="nav-item">
-                <a class="navbar-brand nav-link" href="../signout.php"><!--<img class="rounded-circle" width="40"
-                                                                             src="./img/user.svg"/>--> </a>
-            </li>
-            <li class="nav-item">
-                <a class="navbar-brand nav-link" href="studentUserManual.php"></a>
-            </li>
-        </ul>
-	 </div>
-
-    </div> 
-	</div>
-
-
-
-</nav>
-
-<nav class="breadcrumb">
-    <!-- <a class="breadcrumb-item" href="studentindex.php">Home</a> -->
-    <!-- <a class="breadcrumb-item" href="javascript:history.back();">Back</a> -->
-    <span class="breadcrumb-item active">Academic Records</span>
-    <!-- <a class="breadcrumb-item active" href="../signout.php">logout</a> -->
-</nav>
-
-<!--<div class="card" align="center">
-    <a href="https://saris.slads.ac.tz/index.php/student_create_invoice"> <img class="card-img-top img-fluid "
-                                                  style="width: 112px; height: inherit; padding-top: 15px; "
-                                                  src="./img/admission.svg"></a>
-    <div class="card-block">-->
-<!--        --><!--        <a href="http://212.71.252.209/ita-oas/index.php/student_create_invoice"><h5 class="card-title">Get a Control Number Here</h5></a>
--->
-<!--        <div class="container text-muted">-->
-<!--            cards -->
-<!--            <div class="row">-->
-<!---->
-<!--                <div class="col-sm-12 col-md-12 ">-->
-<!--                    <div class="card" align="center">-->
-<!--        <table class="table">-->
-<!--            <tr>-->
-<!--                <thead>-->
-<!--                 <th class="align-center">Type</th> <th>Required</th><th>Paid</th>  <th>Percentage %</th>-->
-<!--                </thead>-->
-<!--                <tbody>-->
-<!--                  <tr>-->
-<!--                    <td>TUITION FEE</td>  <td>--><?//=$tuition_fee['amount']?><!--</td><td>--><?//=$tuition_fee['paid']?><!--</td><td>--><?//=$percentage_tuition?><!--</td>-->
-<!--                  </tr>-->
-<!--                <tr>-->
-<!--                    <td>DIRECT COST</td>  <td>--><?//=$direct_cost['amount']?><!--</td><td>--><?//=$direct_cost['paid']?><!--</td><td>--><?//=$percentage_direct?><!--</td>-->
-<!---->
-<!--                </tr>-->
-<!--                  <tr>-->
-<!--                      <td>ACCOMMODATION FEE</td>  <td>--><?//=$accommodation['amount']?><!--</td><td>--><?//=$accommodation['paid']?><!--</td><td>--><?//=$percentage_accommodation?><!--</td>-->
-<!---->
-<!--                  </tr>-->
-<!--                  <tr>-->
-<!--                      <td>CARRY OVER FEE</td>  <td>--><?//=$carry_over['amount']?><!--</td><td>--><?//=$carry_over['paid']?><!--</td><td>--><?//=$percentage_carry?><!--</td>-->
-<!---->
-<!--                  </tr>-->
-<!---->
-<!--                </tbody>-->
-<!--            </tr>-->
-<!--        </table>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-    </div>
-</div>
-
-
-<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#navbar-collapse-main">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="studentindex.php"><img width="70" src="./img/logo.svg "/>SARIS SYSTEM</a>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-default navbar-expand-lg navbar-toggleable-sm navbar-light bg-faded sticky-top">
+      <div class="container">
+        <a class="navbar-brand nav-link" href="studentindex.php">
+          <img width="70" src="logo.png " /> SARIS SYSTEM</a
+        >
+        <div class="navbar-nav one">
+          <a class="navbar-brand nav-link" href="#">
+            <img class="rounded-circle" width="40" src="wambura.jpg" /> WAMBURA,
+            Ghatyline
+          </a>
         </div>
+      </div>
+    </nav>
 
-        <div class="collapse navbar-collapse" id="navbar-collapse-main">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="active">Welcome</a></li>
-                <li><a href="#">Logout</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>-->
-
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-     crossorigin="anonymous"></script>
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-     <script src="../assets/dist/sweetalert2.js"></script>
-  <link rel="stylesheet" href="../assets/dist/sweetalert2.css">
-    <script>
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});
-</script>
-<div class="container-flex">
+    <!-- body section-->
+    <div class="container-flex">
     <br>
 </div>
 <div class="container ">
     <h2 class="">Examination Results</h2>
-    WAMBURA, Ghatyline   - 04-0083-20 <br> Bachelor Degree in Customs and Tax Management<table width="90%" height="90%" border="1" cellpadding="3" cellspacing="0" id="table">					  <tr class='total'>
-						<!-- <td colspan="1"><strong>2020/2021</strong></td>
-						<td  style='width:60%' ><strong>Course</strong></td>
-						<td width="30" ><strong>Credit</strong></td>
-						<td width="30" ><strong>Grade</strong></td>
-						<td width="30" ><strong>Remark</strong></td>
-						<td width="30" ><strong>Points</strong></td>
-						<td width="30" ><strong>GPA</strong></td>
-					  </tr>
-					   <tr><td colspan='7' bgcolor='#CCCCCC' scope='col'><b>Semester I</b></td></tr><tr .bgcolor='#ffffff' >
-						<td style='width:20%' align='left'>GSU 07105</td>
-						<td style='width:60%' align='left'>Development Studies </td>
-						<td align='center'> 8</td>
-						<td align='center'>A</td>
-						<td align='center'>PASS</td>
-						<td align='center'>40</td>
-						</tr>  							 <tr .bgcolor='#ceceff' >
-						<td style='width:20%' align='left'>GSU 07104</td>
-						<td style='width:60%' align='left'>Ict Applications</td>
-						<td align='center'> 8</td>
-						<td align='center'>C</td>
-						<td align='center'>PASS</td>
-						<td align='center'>16</td>
-						</tr>  							 <tr .bgcolor='#ffffff' >
-						<td style='width:20%' align='left'>TSU 07101</td>
-						<td style='width:60%' align='left'>Principles Of Accounting</td>
-						<td align='center'> 10</td>
-						<td align='center'>C*</td>
-						<td align='center'>PASS</td>
-						<td align='center'>20</td>
-						</tr>  							 <tr .bgcolor='#ceceff' >
-						<td style='width:20%' align='left'>GSU 07102</td>
-						<td style='width:60%' align='left'>Microeconomics</td>
-						<td align='center'> 10</td>
-						<td align='center'>C</td>
-						<td align='center'>PASS</td>
-						<td align='center'>20</td>
-						</tr>  							 <tr .bgcolor='#ffffff' >
-						<td style='width:20%' align='left'>GSU 07101</td>
-						<td style='width:60%' align='left'>Legal Aspects In Customs And Tax Management I</td>
-						<td align='center'> 8</td>
-						<td align='center'>C*</td>
-						<td align='center'>PASS</td>
-						<td align='center'>16</td>
-						</tr>  							 <tr .bgcolor='#ceceff' >
-						<td style='width:20%' align='left'>GSU 07103</td>
-						<td style='width:60%' align='left'>Business Mathematics</td>
-						<td align='center'> 8</td>
-						<td align='center'>C*</td>
-						<td align='center'>PASS</td>
-						<td align='center'>16</td>
-						</tr>  							 <tr .bgcolor='#ffffff' >
-						<td style='width:20%' align='left'>GSU 07106</td>
-						<td style='width:60%' align='left'>Business Communication </td>
-						<td align='center'> 8</td>
-						<td align='center'>B+</td>
-						<td align='center'>PASS</td>
-						<td align='center'>32</td>
-						</tr>  							 <tr>
-				<td colspan='2' align='right'><strong>2020/2021 Semester I GPA:</strong></td>
-				<td align='center'><strong>60</strong></td>
-				<td align='center'><strong></strong></td>
-				<td align='center'><strong></strong></td>
-				<td align='center'><strong>160</strong></td>
-				<td align='center'><strong>2.6</strong></td>
-			 </tr>
-			 <tr bgcolor='#CCCCCC'>            <tr><td colspan='7' bgcolor='#CCCCCC' scope='col'><b>Semester II</b></td></tr><tr .bgcolor='#ffffff' >
-						<td style='width:20%' align='left'>GSU 07207</td>
-						<td style='width:60%' align='left'>Customer Services</td>
-						<td align='center'> 8</td>
-						<td align='center'>B</td>
-						<td align='center'>PASS</td>
-						<td align='center'>24</td>
-						</tr>  							 <tr .bgcolor='#ceceff' >
-						<td style='width:20%' align='left'>GSU07209</td>
-						<td style='width:60%' align='left'>Macroeconomics </td>
-						<td align='center'> 8</td>
-						<td align='center'>B+</td>
-						<td align='center'>PASS</td>
-						<td align='center'>32</td>
-						</tr>  							 <tr .bgcolor='#ffffff' >
-						<td style='width:20%' align='left'>CSU 07202</td>
-						<td style='width:60%' align='left'>Tariff Classification And Rules Of Origin </td>
-						<td align='center'> 10</td>
-						<td align='center'>C*</td>
-						<td align='center'>PASS</td>
-						<td align='center'>20</td>
-						</tr>  							 <tr .bgcolor='#ceceff' >
-						<td style='width:20%' align='left'>GSU 07208</td>
-						<td style='width:60%' align='left'>Legal Aspects In Customs And Tax Management Ii</td>
-						<td align='center'> 8</td>
-						<td align='center'>C*</td>
-						<td align='center'>PASS</td>
-						<td align='center'>16</td>
-						</tr>  							 <tr .bgcolor='#ffffff' >
-						<td style='width:20%' align='left'>TSU 07203</td>
-						<td style='width:60%' align='left'>Direct Tax Law I</td>
-						<td align='center'> 10</td>
-						<td align='center'>F</td>
-						<td align='center'>CARRY OVER</td>
-						<td align='center'>0</td>
-						</tr>  							 <tr .bgcolor='#ceceff' >
-						<td style='width:20%' align='left'>TSU 07204</td>
-						<td style='width:60%' align='left'>Indirect Taxes</td>
-						<td align='center'> 10</td>
-						<td align='center'>B</td>
-						<td align='center'>PASS</td>
-						<td align='center'>30</td>
-						</tr>  							 <tr .bgcolor='#ffffff' >
-						<td style='width:20%' align='left'>TSU 07205</td>
-						<td style='width:60%' align='left'>Customs Procedures</td>
-						<td align='center'> 8</td>
-						<td align='center'>B</td>
-						<td align='center'>PASS</td>
-						<td align='center'>24</td>
-						</tr>  							 <tr> -->
-				<!-- <td colspan='2' align='right'><strong>2020/2021 Semester II GPA:</strong></td>
-				<td align='center'><strong>62</strong></td>
-				<td align='center'><strong></strong></td>
-				<td align='center'><strong></strong></td>
-				<td align='center'><strong>146</strong></td>
-				<td align='center'><strong>2.3</strong></td>
-			 </tr>
-			 <tr bgcolor='#CCCCCC'>            <tr bgcolor='#ffff00'>
-							<td colspan='2' align='right'><strong>OVERALL GPA & <br/>REMARK:</strong></td>
-							<td colspan='2' align='center'><strong>Points: 306<br/>Credits: 122</strong></td>
-							<td colspan='3' align='center'><strong>2.5<br/>Pass<p></p></strong></td>
-						 </tr>					  <tr class='total'> -->
-						<tr class="total">
+    WAMBURA, Ghatyline   - 04-0083-20 <br>
+    Bachelor Degree in Customs and Tax Management <br><br>
+    <table class="table table-bordered border-dark " width="90%" height="90%" border="1" cellpadding="3" cellspacing="0" id="table">					  
+        <tr class='total'>
+            <tr class="total">
 						<td colspan="1"><strong>2022/2023</strong></td>
 						<td style="width:60%"><strong>Course</strong></td>
 						<td width="30"><strong>Credit</strong></td>
@@ -348,96 +108,12 @@ document.addEventListener('contextmenu', function(e) {
                 </tr>
 			 <tr bgcolor="#CCCCCC">            <td colspan="2" align="right"><strong>GPA REMARK: </strong></td>
 				<td colspan="5" align="center"><strong> PASS </strong></td>
-				</tr></tbody></table>            <script type="text/javascript">
-            function pub(id) {
-              $('#pub').load('auto_publish.php?id=' + pub);
-            }
+				</tr></tbody></table>
 
-            </script>
-                <script type='text/javascript'>
-                    function check()
-                    {
-                       var reg = document.getElementById("reg");
-                       var yr = document.getElementById("yr");
 
-                       if(reg)
-                       {
-                        $('#res').html("Nimeiona RegNo");
-                        $.ajax({
-                          type: 'post',
-                          url: 'auto_publish.php',
-                          data: {
-                             reg:reg,
-                             yr:yr,
-                          },
-                          success: function (response) {
-                             $('#res').html(response);
-                          }
-                        });
-                       }
-                       else
-                       {
-                        $('#res').html("+ Show Year in Trans");
-                       }
-                    }
-                </script>		<div class="copyright"><hr noshade style="color:#B9C2C6" size=1>
-
-        <em>ZALONGWA-SARIS v5.0.2
-
-        </tr>
-
-        </table>
-
-        </body>
-
-        </html>
-
-        </em>
-</div>
-<br><br>
-<!--footer-->
-
-<!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
-<!--adding tooltip-->
-<script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
-<!--Modernaizer here check if not svg supported replace with png-->
-<script>
-    if (!Modernizr.svg) var i = document.getElementsByTagName("img"), j, y;
-    for (j = i.length; j--;) y = i[j].src, y.match(/svg$/) && (i[j].src = y.slice(0, -3) + "png")
-</script>
-<!--script for datatable-->
-<script>
-    $(document).ready(function() {
-        $('#example').DataTable( {
-            responsive: {
-                details: {
-                    display: $.fn.dataTable.Responsive.display.modal( {
-                        header: function ( row ) {
-                            var data = row.data();
-                            return 'Details for '+data[0]+' '+data[1];
-                        }
-                    } ),
-                    renderer: $.fn.dataTable.Responsive.renderer.tableAll( {
-                        tableClass: 'table'
-                    } )
-                }
-            }
-        } );
-    } );
-</script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTDNEpUTHQoQUJMHLrErGJyHg89uy71MyuHNTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+  </body>
 </html>
